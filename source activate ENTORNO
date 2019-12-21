@@ -1,0 +1,8 @@
+source activate ENTORNO
+conda install PAQUETE
+conda env list \\VER ENTORNOS
+conda create -n ENTORNO 
+// r-base rstudio (si vamos a trabajar con R)
+
+
+En Ipython: !conda --- (para descargar o hacer algo en python)
