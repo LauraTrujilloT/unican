@@ -19,3 +19,5 @@ tree->Draw("Sum$((volt-BlineMean)*(time>atleft && time<(atleft+20))):Vbias","","
 When deep ($W(V<V_{dep})< d$) there's almost no charge, when ($W(V>V_{dep})\sim d$)there's charge and its said to be _fully depleted_ and if the detector "doesn't" have gain, the charge will remain constant.
 
 For the first file, the intersection of the two lines (aka Depletion voltage) is equal to $44.78 V$
+
+For report, in RedTop explain for _event=30_ why the current goes from higher values to lower ones rather than the other way around like in the case of RedBottom
