@@ -6,7 +6,7 @@ TTree *tree = (TTree*) file->Get("edge")
 
 #To plot
 tree -> Draw("volt:time")
-tree -> Draw("volt - BlineMean:time")
+tree -> Draw("volt - BlineMean:time - atleft")
 tree -> Draw("volt - BlineMean:time - atleft",
   "event==30", "l")
 tree -> Draw("volt - BlineMean:time - atleft",
@@ -33,6 +33,7 @@ treegad -> Scan("Sum$((volt-BlineMean)*(time -atleft>8 && time<(atleft+22)))","V
 Double_t Vbias[]={60,200,400,600,700}
 Double_t Gain[]={1.047, 1.242, 1.350, 1.860, 2.619}
 
+docker cp /home/ltt:/ltt .
 
 ```
 
