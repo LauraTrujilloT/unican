@@ -1,7 +1,7 @@
 library(RSNNS)
 library(NeuralNetTools)
 #load example from file choose 1 to 6
-load(file="muestra1.rda")
+load(file="muestra6.rda")
 nc=5
 trai=training
 Values <- trai[,1:nc-1]
@@ -12,13 +12,13 @@ str(trai)
 # size defines the topology size=n one hidden with n neurons, size=c(n,m,s), three layers with n,m,s
 # outputActFunc, activation function
 # learnFunc learning type with learnFuncParams defining the parameter(s) i.e. learning rate, momentum
-# maxit number of iterations 
+# maxit number of iterations
 #http://www.ra.cs.uni-tuebingen.de/SNNS/UserManual/node52.html
 model <- mlp(trai$inputsTrain,trai$targetsTrain,size=c(20,20),
              inputsTest = trai$inputsTest, targetsTest = trai$targetsTest,
              outputActFunc = "Act_Logistic",
 #             learnFunc = "Std_Backpropagation",learnFuncParams = c(0.1),
-             learnFunc = "BackpropMomentum",learnFuncParams = c(0.1,0.1), 
+             learnFunc = "BackpropMomentum",learnFuncParams = c(0.1,0.1),
 #             learnFunc = "SCG", learnFuncParams = c(0.1),
               maxit = 1000)
 summary(model)
@@ -46,4 +46,3 @@ plot(trai$inputsTest[,4],predict(model,trai$inputsTest),xlab="",ylab="")
 readline(prompt="Press [enter] to continue")
 par(mfrow=c(1,1))
 dev.off()
-
