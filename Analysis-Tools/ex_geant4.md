@@ -1,7 +1,7 @@
 # <p align="center"> Geant 4 Examples </p>
 <p align="center">Clara Lasaosa  <a href="mailto: clara.lasaosa@alumnos.unican.es">clara.lasaosa@alumnos.unican.es </a> </p> </p>
 <p align="center">Laura Trujillo <a href="mailto: lvtrujillot@unal.edu.co">lvtrujillot@unal.edu.co </a> </p>
-<p align="center"> February 24th, 2020 </p>
+<p align="center"> February 27th, 2020 </p>
 
 ## Introduction
 
@@ -53,9 +53,11 @@ $ vim ~/.bashrc
 source /opt/applications/geant4/geant4.10.04.p01-install/bin/geant4.sh
 ```
 
-For `zsh` users, the `source` could be written in the `.zshrc` as well. If any errors appears, best thing to do is _source_ from the directory of installation (`.../geant4-install/bin/geant4.sh`)
+This implementation was used following (Geant4 Handbook)[1].
 
-### Running an example in _Geant4_
+For `zsh` users, the `source` could be written in the `.zshrc` as well. If any errors appear, best thing to do is _source_ from the directory of installation (`.../geant4-install/bin/geant4.sh`).
+
+## Running an example
 
 Create a folder and copy one of the examples in that directory.
 
@@ -75,13 +77,17 @@ $ make -jN
 $ ./exampleB1
 ```
 
-## Results:
+### Example `B2/B2a`
 
 _This example simulated a simplified fixed target experiment_
 
-### B2a
-
 _Geometry definition:_ Regarding the geometry of the first example, the set-up consists of a target followed by six chambers of increasing transverse size at defined instances from the target. They are located in a region called the Tracker region and their shapes are cylinders.
+
+There are useful commands in order to modify parameters of the simulation as required or desired, some of them are illustrated in _Table 1_. All the commands for each example are located in the GUI with their explanation.
+
+In addition, an uniform magnetic field can be applied using the command `/globalField/setValue <value> <unit>`, which for this example was 2.0 T as well as changing the materials of the targets and the chambers via `B2/det/setTargetMaterial G4_Pb`, `B2/det/setChamberMaterial G4_Ar`.
+
+<div class="page-break"></div>
 
 Parameters | Values |
 -----------|--------|
@@ -97,18 +103,17 @@ Parameters | Values |
 ![Figura 2](b2a-2.png =200x)
 <p align="center"> <i>Figure 2. Side view of detector for 100 Events </i> </p>
 
+<div class="page-break"></div>
+
 Material| Density [mg/cm3] |  RadL|Nucl.Int.Length [m]| Imean [eV] | Temperature [K] | Pressure [atm]
 -----------|-------------|------------|-------|-------|----|----|
 G4_AIRm    | 1.205        | 303.921|  710.095 | 85.700 |293.15| 1.00
 G4_Pb| 11.350 |5.613| 0.18248| 823.000| 293.15 | 1.00
 <p align="center"> <i>Table 1a. Some materials example B2a </i> </p>
 
-## Example B3
+### Example `B3/B3a`
 
 _This example simulates schematically a positron emitted tomography system_
-
-
-### B3a
 
 _Geometry definition_:In regard to the set-up geometry corresponding to the second example, scintillating crystals are used for gamma detection. The crystals are described by a matrix and are circularly arranged to form a ring. Few rings make up the full detector.
 
@@ -124,6 +129,8 @@ Parameters | Values |
 ![Figura 3](b3a-2.png =200x)
 <p align="center"> <i>Figure 3. Front view of detector for 100 Events </i> </p>
 
+<div class="page-break"></div>
+
 Material| Density [mg/cm3] |  RadL [m]|Nucl.Int.Length [m]| Imean [eV] | Temperature [K] | Pressure [atm]
 -----------|-------------|------------|-------|-------|----|----|
 G4_BRAIN_ICRP   | 1.040| 0.35403|0.72156 | 73.300 |293.15| 1.00
@@ -133,3 +140,11 @@ G4_AIR| 1.205 |303.921| 710.095| 85.700| 293.15 | 1.00
 
 The `output` obtained: `The run was 100 events ; Nb of 'good' e+ annihilations: 16
 Total dose in patient : 1.25761 picoGy`
+
+# References
+
+[1] geant4.10.04 Installation Handbook v04, Andrés C. Sevilla, José M. Sevilla, _Universidad Nacional de Colombia_
+
+[2] [Geant4 installation guide](http://geant4-userdoc.web.cern.ch/geant4-userdoc/UsersGuides/InstallationGuide/html/index.html), Geant4 Collaboration
+
+[3] [Twiki Allpix](https://twiki.cern.ch/twiki/bin/view/Main/AllPix) , John Idarraga
