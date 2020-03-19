@@ -13,7 +13,7 @@
 `git status`: 
 `git add YourChange`:
 `git commit -m "Your commit"`: 
-
+`git log`: History/log of your commits
 
 
 
