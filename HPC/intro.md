@@ -110,4 +110,4 @@ _Slurm_ is an open source, fault-tolerant, and highly scalable cluster managemen
 Some key functions:
 
 1. It allocates exclusive or non-exclusive access to compute nodes to users for some duration of time so they can execute computational tasks.
-2.  It provides a series of commands starting 
+2.  It provides a series of commands starting
