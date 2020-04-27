@@ -5,6 +5,7 @@
 <div align="center"><a href="mailto:lvtrujillot@unal.edu.co">Laura Trujillo Taborda.</a></div>
 
 ---
+_"The only thing that reliably increases programmer productivity is better working practices"_ - Gregory V. Wilson.
 
 Since modern scientific research requires managing and analyzing large amounts of data, software development becomes an important tool for research and thus, its correct practices are necessary to learn in order to improve efficiency, productivity and reliability of the software. On the other hand, software is often used for more than a single project and reused as well for other researchers and as a result, if there is no control on changes made by other peers, this will be likely lead to negative and several impacts on the scientific process due to computing errors. For the reasons presented above and many others, the adaptation of practices like easiness to read code, well documented code, optimization and debuggers are becoming not only necessary but vital for our daily research projects.
 

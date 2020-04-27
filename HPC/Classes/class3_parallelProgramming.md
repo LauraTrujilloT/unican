@@ -51,5 +51,3 @@ February 24 2020
 - Data parallelism (Each processor performs the same task on different data, not only in HPC also in distributed computing, some big data software packages: MapReduce, Apache Spark)
 - Task parallelism (each processors performs a different task on the same data)
 - Implicit parallelism (automatic parallelisation: loops for instance, compilers)
-
-

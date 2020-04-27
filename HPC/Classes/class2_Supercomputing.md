@@ -1,14 +1,18 @@
-# High-Performance Computing: Supercomputing
+# HPC: Supercomputing
 
-##Outline
+## Overview
 
-- Computer basics
-- Supercomputer : applications, performance, evolution, cooling
+- Introduction: Anatomy of a computer
+- Supercomputer :
+  - Applications
+  - Performance Measurement (speedup and Amdahl's Law)
+  - Evolution of supercomputers, TOP500
+  - Cooling
 - Example of supercomputer: _Altamira_
 
 ## Introduction
 
-**CPU (Central Processing Unit)**: microscopic transistors. Each operation requires three stages: Fetch (instruction from RAM), decode,execute.
+**CPU (Central Processing Unit)**: made of microscopic transistors. Each operation requires three stages: Fetch (instruction from RAM), decode (what operation is) and execute (instruction by relevant parts of the CPU)
 
 **RAM (Random Access Memory)**: System's short term data storage. It allows data items to be read or written in almost the same amount of time irrespective of the physical location of data inside the memory.
 
@@ -53,9 +57,15 @@ There are a lot of.
 - **Rpeak**: theoretical maximum performance measured in GFlops (can never be reached, LINPACK benchmark is used by TOP 500 : measures how fast a computer can perform a n equations)
 - **Speedup**: Improvement in speed of execution of a task executed on two similar architectures with different resources. (related to [Amdhal's law](https://www.sciencedirect.com/topics/computer-science/amdahls-law))
 
-$$Speedup = \frac{1}{(1-p) + p/N } $$
+$$Speedup = \frac{Sequential-Execution-Time}{Parallel-Execution-Time} $$
 
-being N the number of processors and p the part of parallizable code.
+p is the number of processors. Best case $S(p) = p$
+
+- **Amdhal's Law**: Speedup when using multiple processors.
+
+$$S(p) \leq \frac{1}{R + \frac{1-R}{p}} \leq \frac{1}{R} $$
+
+R being the fraction of time (for a job on one processor) that must be done sequentially.
 
 ### Cooling
 
